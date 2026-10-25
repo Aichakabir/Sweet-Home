@@ -20,7 +20,7 @@ jobs:
         run: dotnet workload install maui-android
 
       - name: Build APK
-        run: dotnet publish SweetHome.csproj -f net10.0-android -c Release -p:AndroidPackageFormats=apk
+        run: dotnet publish SweetHome.csproj -f net10.0-android -c Release -p:AndroidPackageFormats=apk -p:TargetFrameworks=net10.0-android
 
       - name: Save APK
         uses: actions/upload-artifact@v4
